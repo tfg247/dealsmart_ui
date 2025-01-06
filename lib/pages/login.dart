@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ask_signup.dart';
+
 // void main() {
 //   runApp(const MyApp());
 // }
@@ -109,7 +111,11 @@ class LoginPage extends StatelessWidget {
                       children: [
                         const Text("Don't have an account?"),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext context) => SignUpPage())
+                            );
+                          },
                           child: const Text('Sign Up'),
                         ),
                       ],
