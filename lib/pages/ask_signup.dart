@@ -1,3 +1,5 @@
+import 'package:dealsmart/pages/letsdodeal.dart';
+import 'package:dealsmart/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -10,7 +12,8 @@ class SignUpPage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/background.png'), // Ensure the image is in your assets folder
+                image: AssetImage(
+                    'assets/images/background.png'), // Ensure the image is in your assets folder
                 fit: BoxFit.cover,
               ),
             ),
@@ -63,7 +66,8 @@ class SignUpPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -75,13 +79,20 @@ class SignUpPage extends StatelessWidget {
                   // Email/Mobile Sign-Up Button
                   ElevatedButton(
                     onPressed: () {
-                      // Handle Email/Mobile Sign-Up
+                      // Handle Email/Mobile Sign-Up LetsDoDailyDealPage
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                LetsDoDailyDealPage()), // Replace with your Sign-In screen
+                      );
                     },
                     child: Text('Sign Up with Email / Mobile'),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.blueAccent,
                       onPrimary: Colors.white,
-                      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -96,6 +107,29 @@ class SignUpPage extends StatelessWidget {
                       color: Colors.white70,
                     ),
                     textAlign: TextAlign.center,
+                  ),
+                  // Add this at the bottom of your Column widget
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to the Sign-In screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                LoginPage()), // Replace with your Sign-In screen
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Text(
+                        'Already on DealSmart? Sign in',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
