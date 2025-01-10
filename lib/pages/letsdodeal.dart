@@ -1,3 +1,4 @@
+import 'package:dealsmart/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class LetsDoDailyDealPage extends StatelessWidget {
@@ -109,20 +110,23 @@ class LetsDoDailyDealPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Add your navigation logic here
+                      Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext context) => HomePage())
+                            );
                     },
                     style: ElevatedButton.styleFrom(
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
                       backgroundColor: Colors.blueAccent,
                     ),
-                    child: Icon(
-                      Icons.arrow_forward_ios_outlined,
+                    child: const Icon(
+                      Icons.arrow_forward_ios_rounded,
                       color: Colors.white,
                       size: 24,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     "Next",
                     style: TextStyle(
                       fontSize: 16,
