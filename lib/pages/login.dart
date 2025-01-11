@@ -1,3 +1,4 @@
+import 'package:dealsmart/pages/home/home.dart';
 import 'package:flutter/material.dart';
 
 import 'ask_signup.dart';
@@ -76,7 +77,13 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     // Sign-In Button
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => HomePage(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 50),
                         shape: RoundedRectangleBorder(
@@ -112,9 +119,9 @@ class LoginPage extends StatelessWidget {
                         const Text("Don't have an account?"),
                         TextButton(
                           onPressed: () async {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(builder: (BuildContext context) => SignUpPage())
-                            );
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    SignUpPage()));
                           },
                           child: const Text('Sign Up'),
                         ),

@@ -1,4 +1,4 @@
-import 'package:dealsmart/pages/home.dart';
+import 'package:dealsmart/pages/home/home.dart';
 import 'package:flutter/material.dart';
 
 class LetsDoDailyDealPage extends StatelessWidget {

@@ -3,6 +3,8 @@ import 'package:dealsmart/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class SignUpPage extends StatelessWidget {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     'assets/images/background.png'), // Ensure the image is in your assets folder
@@ -28,12 +30,12 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   // App Logo or Title
 
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   Image.asset(
                     'assets/images/logo.png', // Add your logo path here
                     height: 80,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Fancy Heading
                   Text(
@@ -46,13 +48,13 @@ class SignUpPage extends StatelessWidget {
                         Shadow(
                           color: Colors.black.withOpacity(0.3),
                           blurRadius: 8,
-                          offset: Offset(2, 2),
+                          offset: const Offset(2, 2),
                         ),
                       ],
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Google Sign-Up Button
                   ElevatedButton.icon(
                     onPressed: () {
@@ -62,20 +64,20 @@ class SignUpPage extends StatelessWidget {
                       'assets/images/google_logo.png', // Add a Google icon to your assets folder
                       height: 24,
                     ),
-                    label: Text('Sign Up with Google'),
+                    label: const Text('Sign Up with Google'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      // primary: Colors.white,
+                      // onPrimary: Colors.black,
                       padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                          const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Text("or"),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
+                  const Text("or"),
+                  const SizedBox(height: 20),
                   // Email/Mobile Sign-Up Button
                   ElevatedButton(
                     onPressed: () {
@@ -87,20 +89,20 @@ class SignUpPage extends StatelessWidget {
                                 LetsDoDailyDealPage()), // Replace with your Sign-In screen
                       );
                     },
-                    child: Text('Sign Up with Email / Mobile'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.blueAccent,
-                      onPrimary: Colors.white,
+                      // primary: Colors.blueAccent,
+                      // onPrimary: Colors.white,
                       padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                          const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
+                    child: Text('Sign Up with Email / Mobile'),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   // Terms and Conditions
-                  Text(
+                  const Text(
                     'By signing up, you agree to our Terms & Conditions and Privacy Policy.',
                     style: TextStyle(
                       fontSize: 14,
@@ -116,11 +118,11 @@ class SignUpPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                LoginPage()), // Replace with your Sign-In screen
+                                const LoginPage()), // Replace with your Sign-In screen
                       );
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
+                    child: const Padding(
+                      padding: EdgeInsets.only(top: 20.0),
                       child: Text(
                         'Already on DealSmart? Sign in',
                         style: TextStyle(
